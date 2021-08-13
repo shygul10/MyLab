@@ -26,7 +26,7 @@ pipeline{
         // Stage3 : Publish the source code to Sonarqube
         stage ('Sonarqube Analysis'){
             steps {
-                echo ' Source code published to Sonarqube for SCA......'
+                nexusArtifactUploader artifacts: [[artifactId: 'VinayDevOpsLab', classifier: '', file: 'target/VinayDevOpsLab-0.0.3-SNAPSHOT.war', type: 'war']], credentialsId: '53d1fa91-76b6-45dc-b698-3a277146d5dc', groupId: 'com.vinaysdevopslab', nexusUrl: '172.20.10.133:8081', nexusVersion: 'nexus3', protocol: 'http', repository: 'VinaysDevOpsLab-SNAPSHOT', version: '0.0.3-SNAPSHOT'
             }
         }       
         
