@@ -81,6 +81,8 @@ pipeline{
                                                                                    removePrefix: '', sourceFiles: '')], 
                                                            usePromotionTimestamp: false, 
                                                            useWorkspaceInPromotion: false, verbose: false)])
+            }
+        }
     }
 
 }
